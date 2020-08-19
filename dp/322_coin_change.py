@@ -7,7 +7,7 @@
 #   coin less than current index.
 # - If amount index is untouched, can't reach. Else, return that amount. 
 def coinChange(self, coins: List[int], amount: int) -> int:
-    # if amount == 0:   handled by line 9
+    # if amount == 0:   handled by "dp[0] = 0"
     #     return 0
 
     dp = [float("inf")] * (amount+1)
