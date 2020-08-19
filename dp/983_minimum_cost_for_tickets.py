@@ -3,8 +3,10 @@
 
 # Bottom up approach: 
 # - Create dp array with indexes from 0 to last day (value = 0). Ignore index 0 and the index equals the day.
-# - Iterate from 1 to last day, and at each day (if we travel on it) check the min dollars used to reach the days 1/7/30
-#   days less than current day.
+# - Iterate from 1 to last day, and at each day (if we travel on it) check the min dollars that can be used to reach 
+#   the days 1/7/30 days less than current day.
+#   NOTE: once the price of repeated 1-day tickets overtake the price of a 7-day ticket, the 7-day price will be the 
+#   min and therefore the value that fills the dp array at this index
 # - If we don't travel on given day, day's cost is the previous day's cost.
 # - Return end of array 
 def mincostTickets(self, days: List[int], costs: List[int]) -> int:
