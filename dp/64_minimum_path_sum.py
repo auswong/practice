@@ -4,7 +4,7 @@
 # Bottom up approach: 
 # - Initialize each index in the 1st row and col to have the sum of all previous elements in row and col respectively
 # - Starting at cell (1,1), add the cells value to the min of the top and left cell
-# - The answer will be in the bottom right cell since you're always taking the min at each step
+# - The answer will be in the end cell since you're always taking the min at each step
 def minPathSum(self, grid: List[List[int]]) -> int:
     # initialize 1st row
     for i in range(1, len(grid[0])):
