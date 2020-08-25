@@ -2,7 +2,7 @@
 # Subsets: given a set of distinct integers, return all possible subsets (the power set)
 
 # Backtracking:
-# - Base case: stop once tthe remaining left to insert == 0
+# - Base case: stop once the remaining left to insert == 0
 # - Backtracking fundamentals
 #   1. Make the change: insert a num into so_far list
 #   2. Recurse: call gen(...) w/start index == index of inserted+1 which prevents adding duplicates to a subset-in-progress 
