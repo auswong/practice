@@ -65,7 +65,7 @@ class Trie:
 # 2nd version: use for loop to iterate through dictionaries
 # init and insert the same
 
-def search(self, word: str) -> bool:
+    def search(self, word: str) -> bool:
         """
         Returns if the word is in the trie.
         """
@@ -83,20 +83,20 @@ def search(self, word: str) -> bool:
                 return False
             
             search_dic = search_dic[word[i]].children
+            
+
+    def startsWith(self, prefix: str) -> bool:
+        """
+        Returns if there is any word in the trie that starts with the given prefix.
+        """
+        if not prefix:
+            return True
         
+        search_dic = self.children
+        for i in range(len(prefix)):
+            if prefix[i] not in search_dic:
+                return False
 
-def startsWith(self, prefix: str) -> bool:
-    """
-    Returns if there is any word in the trie that starts with the given prefix.
-    """
-    if not prefix:
+            search_dic = search_dic[prefix[i]].children
+        
         return True
-    
-    search_dic = self.children
-    for i in range(len(prefix)):
-        if prefix[i] not in search_dic:
-            return False
-
-        search_dic = search_dic[prefix[i]].children
-    
-    return True
